@@ -9,23 +9,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d01c5b7e-3c51-4662-af4c-54000446b177" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductSalesApi.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductSalesApi/Auth/JwtHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductSalesApi/Data/AppDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductSalesApi/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductSalesApi/Entities/Product.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductSalesApi/Entities/Sale.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductSalesApi/Entities/SaleItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductSalesApi/ProductSalesApi.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductSalesApi/ProductSalesApi.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductSalesApi/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductSalesApi/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductSalesApi/Services/ProductService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductSalesApi/Services/SaleService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductSalesApi/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductSalesApi/appsettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductSalesApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProductSalesApi/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +25,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/ProductSalesApi/Auth/JwtHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ProductSalesApi/DTOs/SaleCreateDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ProductSalesApi/DTOs/SaleItemCreateDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProductSalesApi/Data/AppDbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProductSalesApi/Entities/Product.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProductSalesApi/Entities/Sale.cs" root0="FORCE_HIGHLIGHTING" />
@@ -47,6 +34,10 @@
     <setting file="file://$PROJECT_DIR$/ProductSalesApi/Services/ProductService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProductSalesApi/Services/SaleService.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 4
 }]]></component>
@@ -58,8 +49,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Launch Settings Profile.ProductSalesApi: https.executor": "Run",
+    "Docker.ProductSalesApi/Dockerfile.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
@@ -136,7 +129,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762612199810</updated>
-      <workItem from="1762612201405" duration="1484000" />
+      <workItem from="1762612201405" duration="23299000" />
     </task>
     <servers />
   </component>
