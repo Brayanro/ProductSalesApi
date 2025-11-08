@@ -19,7 +19,6 @@ public class SaleService
         if (dto.Items == null || dto.Items.Count == 0)
             throw new ArgumentException("Sale must contain at least one item.");
 
-        // Validar que los productos existan
         var productIds = dto.Items.Select(i => i.ProductId).ToList();
         var products = await _context.Products
             .Where(p => productIds.Contains(p.Id))
@@ -30,7 +29,7 @@ public class SaleService
 
         var sale = new Sale
         {
-            Date = dto.Date, // 👈 ya es DateOnly
+            Date = dto.Date,
             Items = new List<SaleItem>()
         };
 
@@ -40,11 +39,9 @@ public class SaleService
         {
             var product = products.First(p => p.Id == item.ProductId);
 
-            // Validar stock disponible
             if (product.Stock < item.Quantity)
                 throw new ArgumentException($"Not enough stock for product '{product.Name}'.");
 
-            // Descontar stock
             product.Stock -= item.Quantity;
 
             var saleItem = new SaleItem
@@ -66,7 +63,6 @@ public class SaleService
         return sale;
     }
 
-    // ✅ Adaptamos el método de reporte para DateOnly
     public async Task<List<Sale>> GetSalesByDateRangeAsync(DateOnly start, DateOnly end)
     {
         return await _context.Sales

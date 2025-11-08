@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProductSalesApi.Services;
 using ProductSalesApi.DTOs;
@@ -6,6 +7,7 @@ namespace ProductSalesApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 public class SalesController : ControllerBase
 {
     private readonly SaleService _service;
@@ -16,6 +18,9 @@ public class SalesController : ControllerBase
     }
 
     [HttpPost]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<IActionResult> Register([FromBody] SaleCreateDto saleDto)
     {
         try
@@ -30,6 +35,8 @@ public class SalesController : ControllerBase
     }
 
     [HttpGet("report")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<IActionResult> Report(DateTime start, DateTime end)
     {
         var startDate = DateOnly.FromDateTime(start);
